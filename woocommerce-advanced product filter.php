@@ -24,4 +24,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
     add_action( 'widgets_init', 'register_advanced_product_filter_widget' );
 
+
+    function apply_advanced_product_filters(){
+        echo 'apply_advanced_product_filters work';
+    }
+
+    add_action( 'pre_get_posts', 'apply_advanced_product_filters' );
+
 }
